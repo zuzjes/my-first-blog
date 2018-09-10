@@ -1,26 +1,16 @@
 <html>
-<head>
-    <title>Zuzka's blog</title>
-    <h1>island</h1>
-    </head>
+    <div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
 
-
-    <body>
+    {% for post in posts %}
         <div>
-            <p>wechwechwech</p>
-            <p>funguje!</p>
-
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
+    {% endfor %}
 
-        <div>
-            <p>published: 09.09.2018, 14:48</p>
-            <em>text text text text text text text</em>
-
-            <strong>textik textik textik textik textik </strong>
-            <br>
-            <em>text text text text text text text</em>
-            <p><strong>zuz</strong></p>
-        </div>
     <a href="https://www.hedvabnastezka.cz/zeme/evropa/island/pruvodce/">link</a>
     <ul><li>rejkjavik</li><li>island</li></ul>
     </body>
